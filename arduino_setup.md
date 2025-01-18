@@ -18,8 +18,38 @@ chat@chat-desktop:~$ arduino
 
 ## Wiring
 
-## Install Python 3.8 on Jetson Nano
 
+
+## Install Python 3.8 on Jetson Nano
+```bash
+1.update & upgrade
+sudo apt update-> 건너띈다.
+sudo apt upgrade
+
+2. 필요한 패키지 설치
+Y
+
+
+3. python3.8 소스코드 받기
+cd /
+sudo wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tar.xz
+
+4. 압축 풀기
+sudo tar -xf Python-3.8.12.tar.xz
+cd Python-3.8.12
+
+5. Build
+#./configure --enable-optimizations
+./configure --enable-loadable-sqlite-extensions --with-bz2
+make -j4
+6. 마무리
+sudo make altinstall
+python3.8 --version
+
+7. 가상환경 (중요!!)
+python3.8 -m venv myenv                                     
+source myenv/bin/activate
+```
 
 
 
