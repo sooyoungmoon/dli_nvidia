@@ -81,7 +81,15 @@ python3.8 -m venv myenv
 source myenv/bin/activate
 ```
 
+## Jetson nano에 jupyter notebook 설치하기
 
+### Install Jupyter Notebook 
+```bash
+pip install jupyter—>  error ->sudo apt-get update
+sudo apt-get install python3-dev libssl-dev libffi-dev
+sudo apt-get install python3 python3-pip
+pip install openai
+pip install gradio
 
-
+```
 
