@@ -83,6 +83,11 @@ source myenv/bin/activate
 
 ## Jetson nano에 jupyter notebook 설치하기
 
+### Running a virtual environment
+```bash
+source myenv/bin/activate
+```
+
 ### Install Jupyter Notebook 
 ```bash
 pip install jupyter—>  error ->sudo apt-get update
