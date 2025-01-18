@@ -303,4 +303,5 @@ python -m ipykernel install --user --name=myenv --display-name="Python (myenv)"
 
 이렇게 하면 bz2 지원이 포함된 Python으로 모든 패키지가 정상적으로 작동할 것입니다. Jupyter Notebook을 다시 시작하고 새로 등록한 kernel을 선택해서 사용해보세요.
 
+## GPIO
 
