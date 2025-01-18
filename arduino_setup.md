@@ -1,5 +1,5 @@
 
-## Install Java for ARM64  
+## Install Java for ARM64 & Do serial communication settings
 ```bash
 chat@chat-desktop:~$sudo apt update
 chat@chat-desktop:~$sudo apt install openjdk-8-jdk
@@ -16,9 +16,39 @@ chat@chat-desktop:~$ arduino
 
 ## Install SimpleDHT11 library 
 
+## Sample code 
+```c
+#include <SimpleDHT.h>
+int pinDHT11 = 2;
+SimpleDHT11 dht11(pinDHT11);
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  byte temperature = 0;
+  byte humidity = 0;
+  
+  if (dht11.read(&temperature, &humidity, NULL) == SimpleDHTErrSuccess) {
+    int temp = (int)temperature;
+    int humid = (int)humidity;
+    
+    // 유효한 범위인지 확인
+    if (temp >= 0 && temp <= 50 && humid >= 0 && humid <= 100) {
+      Serial.print(temp);
+      Serial.print(",");
+      Serial.println(humid);
+    }
+  }
+  
+  delay(2000);  // 2초 대기
+}
+
+```
 ## Wiring
 
-
+![](wiring.png)
 
 ## Install Python 3.8 on Jetson Nano
 ```bash
