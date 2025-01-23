@@ -7,7 +7,7 @@ System: 선택 사항,  어시스턴트의 동작을 설정하는 데 사용
 User: 사용자가 직접 입력하는 메시지
 Assistance: System이 설정한 태도와 설정을 반영하여 사용자의 요청사항에 답변
 
-## How to user function calling
+## How to use function calling
 
 ### Step 1: 함수를 정의한다
 get_fruit_price: 과일 이름을 입력하면 과일 가격을 반환하는 함수
