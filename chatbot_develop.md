@@ -97,3 +97,6 @@ proc_messages.append(
 messages += proc_messages
 
 ```
+
+### Migration issue 
+[다음 링크 참조] (https://github.com/openai/openai-python/discussions/742)
